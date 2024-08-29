@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Memory Game</h1>
+        <div id="menu">
+            <input type="text" id="nickname" placeholder="Enter your nickname" required>
+            <div class="button-container">
+                <button id="play-btn">Play Single Player</button>
+                <button id="play-two-btn">Play Two Players</button>
+                <button id="how-to-play-btn">How to Play</button>
+                <button id="leaderboard-btn">Leaderboard</button>
+            </div>
+        </div>
+        <div id="game-area" style="display: none;">
+            <div id="game-stats">
+                <p>Time: <span id="time">00:00</span></p>
+                <p>Moves: <span id="moves">0</span></p>
+            </div>
+            <div id="game-board"></div>
+            <button id="back-to-menu-btn">Back to Menu</button>
+        </div>
+        <div id="two-player-area" style="display: none;">
+            <div id="player1-stats" class="player-stats">
+                <h3>Player 1</h3>
+                <p>Pairs: <span id="player1-pairs">0</span></p>
+            </div>
+            <div id="game-board-two"></div>
+            <div id="player2-stats" class="player-stats">
+                <h3>Player 2</h3>
+                <p>Pairs: <span id="player2-pairs">0</span></p>
+            </div>
+            <p id="current-player">Current Player: Player 1</p>
+        </div>
+        <div id="leaderboard" style="display: none;">
+            <h2>Leaderboard</h2>
+            <div class="leaderboard-columns">
+                <div>
+                    <h3>Best Times</h3>
+                    <ol id="time-leaderboard"></ol>
+                </div>
+                <div>
+                    <h3>Least Moves</h3>
+                    <ol id="moves-leaderboard"></ol>
+                </div>
+            </div>
+            <button id="back-from-leaderboard">Back to Menu</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
